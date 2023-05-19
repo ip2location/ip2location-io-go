@@ -12,6 +12,6 @@ func OpenConfiguration(apikey string) (*Configuration, error) {
 	var config = &Configuration{}
 	config.apiKey = apikey
 	config.source = "sdk-go-iplio"
-	config.sourceVersion = "1.0.0"
+	config.sourceVersion = "1.0.1"
 	return config, nil
 }
