@@ -1,4 +1,4 @@
-module github.com/ip2location/ip2location-io-go
+module github.com/ip2location/ip2location-io-go/ip2locationio
 
 go 1.18
 
