@@ -13,7 +13,7 @@ Installation
 ============
 ```
 
-go get github.com/ip2location/ip2location-io-go
+go get github.com/ip2location/ip2location-io-go/ip2locationio
 
 ```
 
@@ -25,7 +25,7 @@ Usage Example
 package main
 
 import (
-	"github.com/ip2location/ip2location-io-go/"
+	"github.com/ip2location/ip2location-io-go/ip2locationio"
 	"fmt"
 )
 
@@ -136,7 +136,7 @@ func main() {
 package main
 
 import (
-	"github.com/ip2location/ip2location-io-go/"
+	"github.com/ip2location/ip2location-io-go/ip2locationio"
 	"fmt"
 )
 
@@ -230,7 +230,7 @@ func main() {
 package main
 
 import (
-	"github.com/ip2location/ip2location-io-go/"
+	"github.com/ip2location/ip2location-io-go/ip2locationio"
 	"fmt"
 )
 
@@ -265,7 +265,7 @@ func main() {
 package main
 
 import (
-	"github.com/ip2location/ip2location-io-go/"
+	"github.com/ip2location/ip2location-io-go/ip2locationio"
 	"fmt"
 )
 
@@ -300,7 +300,7 @@ func main() {
 package main
 
 import (
-	"github.com/ip2location/ip2location-io-go/"
+	"github.com/ip2location/ip2location-io-go/ip2locationio"
 	"fmt"
 )
 
@@ -335,7 +335,7 @@ func main() {
 package main
 
 import (
-	"github.com/ip2location/ip2location-io-go/"
+	"github.com/ip2location/ip2location-io-go/ip2locationio"
 	"fmt"
 )
 
