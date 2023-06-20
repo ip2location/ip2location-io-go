@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"regexp"
 	"strconv"
 	"strings"
 	"time"
@@ -123,6 +124,11 @@ func (a *DomainWhois) LookUp(domain string) (DomainWhoisResult, error) {
 		if err != nil {
 			return res, err
 		}
+
+		tmpStr := string(bodyBytes[:])
+		m1 := regexp.MustCompile(`(create|update|expire)(_date"\:")(.+?)\+[0-9]+(")`)
+		tmpStr = m1.ReplaceAllString(tmpStr, "${1}${2}${3}Z${4}") // replacing non-standard format
+		bodyBytes = []byte(tmpStr)
 
 		err = json.Unmarshal(bodyBytes, &res)
 
