@@ -101,10 +101,20 @@ type IPGeolocationResult struct {
 	AdsCategoryName string `json:"ads_category_name"`
 	IsProxy         bool   `json:"is_proxy"`
 	Proxy           struct {
-		LastSeen  int    `json:"last_seen"`
-		ProxyType string `json:"proxy_type"`
-		Threat    string `json:"threat"`
-		Provider  string `json:"provider"`
+		LastSeen           int    `json:"last_seen"`
+		ProxyType          string `json:"proxy_type"`
+		Threat             string `json:"threat"`
+		Provider           string `json:"provider"`
+		IsVpn              bool   `json:"is_vpn"`
+		IsTor              bool   `json:"is_tor"`
+		IsDataCenter       bool   `json:"is_data_center"`
+		IsPublicProxy      bool   `json:"is_public_proxy"`
+		IsWebProxy         bool   `json:"is_web_proxy"`
+		IsWebCrawler       bool   `json:"is_web_crawler"`
+		IsResidentialProxy bool   `json:"is_residential_proxy"`
+		IsSpammer          bool   `json:"is_spammer"`
+		IsScanner          bool   `json:"is_scanner"`
+		IsBotnet           bool   `json:"is_botnet"`
 	} `json:"proxy"`
 }
 
