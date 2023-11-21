@@ -9,8 +9,8 @@ project = 'IP2Location.io Go SDK'
 copyright = '2023, IP2Location'
 author = 'IP2Location'
 
-release = '1.0.0'
-version = '1.0.0'
+release = '1.0.3'
+version = '1.0.3'
 
 # -- General configuration
 

@@ -9,7 +9,7 @@ This module requires API key to function. You may sign up for a free API key at 
 Install this package using the command below:
 
 ``` bash
-go get github.com/ip2location/ip2location-io-go/ip2locationio
+go get github.com/ip2location/ip2location-io-go
 ```
 
 ## Sample Codes
