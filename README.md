@@ -1,4 +1,4 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/ip2location/ip2location-io-go/ip2locationio)](https://goreportcard.com/report/github.com/ip2location/ip2location-io-go/ip2locationio)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ip2location/ip2location-io-go)](https://goreportcard.com/report/github.com/ip2location/ip2location-io-go)
 
 IP2Location.io Go SDK
 =====================
