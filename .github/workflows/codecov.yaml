@@ -1,6 +1,6 @@
 # Generate Codecov report
 
-name: Generate Codecov report
+name: Generate Codecov Report
 on:
   push:
 
