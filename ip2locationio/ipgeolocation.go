@@ -147,7 +147,7 @@ func (a *IPGeolocation) LookUp(ip string, lang string) (IPGeolocationResult, err
 	var ex IPGeolocationError
 
 	// myUrl := "https://" + a.baseUrl + "?key=" + url.QueryEscape(a.configuration.apiKey) + "&ip=" + url.QueryEscape(ip) + "&lang=" + url.QueryEscape(lang) + "&source=" + url.QueryEscape(a.configuration.source) + "&source_version=" + url.QueryEscape(a.configuration.sourceVersion)
-	
+
 	myUrl := "https://" + a.baseUrl + "?ip=" + url.QueryEscape(ip) + "&source=" + url.QueryEscape(a.configuration.source) + "&source_version=" + url.QueryEscape(a.configuration.sourceVersion)
 
 	if a.configuration.apiKey != "" {

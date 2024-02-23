@@ -4,9 +4,9 @@ import (
 	"testing"
 )
 
-// TestInvalidKey calls LookUp without an API key
+// TestInvalidKeyWhois calls LookUp without an API key
 // to see if it returns a result.
-func TestInvalidKey(t *testing.T) {
+func TestInvalidKeyWhois(t *testing.T) {
 	dummy := "DUMMY"
 	config, err := OpenConfiguration(dummy)
 
@@ -47,7 +47,7 @@ func TestGetPunycode(t *testing.T) {
 	expected := "xn--tst-qla.de"
 	res, err := whois.GetPunycode(domain)
 
-	if err!= nil || res != expected {
+	if err != nil || res != expected {
 		t.Fatalf(`whois.GetPunycode(domain) = %+v, error`, res)
 	}
 }
@@ -71,7 +71,7 @@ func TestGetNormalText(t *testing.T) {
 	expected := "täst.de"
 	res, err := whois.GetNormalText(domain)
 
-	if err!= nil || res != expected {
+	if err != nil || res != expected {
 		t.Fatalf(`whois.GetNormalText(domain) = %+v, error`, res)
 	}
 }
@@ -95,7 +95,7 @@ func TestGetDomainName(t *testing.T) {
 	expected := "example.com"
 	res, err := whois.GetDomainName(url)
 
-	if err!= nil || res != expected {
+	if err != nil || res != expected {
 		t.Fatalf(`whois.GetDomainName(url) = %+v, error`, res)
 	}
 }
@@ -119,7 +119,7 @@ func TestGetDomainExtension(t *testing.T) {
 	expected := ".com"
 	res, err := whois.GetDomainExtension(str)
 
-	if err!= nil || res != expected {
+	if err != nil || res != expected {
 		t.Fatalf(`whois.GetDomainExtension(str) = %+v, error`, res)
 	}
 }
