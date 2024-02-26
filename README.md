@@ -1,5 +1,4 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/ip2location/ip2location-io-go)](https://goreportcard.com/report/github.com/ip2location/ip2location-io-go)
-[![codecov](https://codecov.io/gh/ip2location/ip2location-io-go/graph/badge.svg?token=WE2JBOC3D0)](https://codecov.io/gh/ip2location/ip2location-io-go)
 
 IP2Location.io Go SDK
 =====================
