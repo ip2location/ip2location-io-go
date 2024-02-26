@@ -28,6 +28,30 @@ func TestInvalidKeyWhois(t *testing.T) {
 	}
 }
 
+// TestURLWhois calls LookUp with a bad URL.
+func TestURLWhois(t *testing.T) {
+	dummy := "DUMMY"
+	config, err := OpenConfiguration(dummy)
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	whois, err := OpenDomainWhois(config)
+	whois.baseUrl = whois.baseUrl + ".my"
+
+	if err != nil {
+		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
+	}
+
+	domain := "locaproxy.com"
+	res, err := whois.LookUp(domain)
+
+	if err == nil {
+		t.Fatalf(`whois.LookUp(domain) = %+v, error`, res)
+	}
+}
+
 // TestGetPunycode calls GetPunycode
 // to see if it returns the correct Punycode.
 func TestGetPunycode(t *testing.T) {
