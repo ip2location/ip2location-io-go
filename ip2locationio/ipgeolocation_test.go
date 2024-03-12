@@ -103,3 +103,53 @@ func TestURLIPGeolocation(t *testing.T) {
 		t.Fatalf(`ipl.LookUp(ip, lang) = %+v, %v, error`, res, err)
 	}
 }
+
+// TestNonJSONIPGeolocation calls LookUp with a non-JSON result URL.
+func TestNonJSONIPGeolocation(t *testing.T) {
+	dummy := "" // blank key
+	config, err := OpenConfiguration(dummy)
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	ipl, err := OpenIPGeolocation(config)
+
+	ipl.baseUrl = "ip2location.io"
+	if err != nil {
+		t.Fatalf(`OpenIPGeolocation(config) = %+v, %v, error`, ipl, err)
+	}
+
+	ip := "8.8.8.8"
+	lang := ""
+	res, err := ipl.LookUp(ip, lang)
+
+	if err == nil {
+		t.Fatalf(`ipl.LookUp(ip, lang) = %+v, %v, error`, res, err)
+	}
+}
+
+// TestHTTPResponseIPGeolocation calls LookUp with a 404 URL.
+func TestHTTPResponseIPGeolocation(t *testing.T) {
+	dummy := "" // blank key
+	config, err := OpenConfiguration(dummy)
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	ipl, err := OpenIPGeolocation(config)
+
+	ipl.baseUrl = "ip2location.io/notfound"
+	if err != nil {
+		t.Fatalf(`OpenIPGeolocation(config) = %+v, %v, error`, ipl, err)
+	}
+
+	ip := "8.8.8.8"
+	lang := ""
+	res, err := ipl.LookUp(ip, lang)
+
+	if err == nil {
+		t.Fatalf(`ipl.LookUp(ip, lang) = %+v, error`, res)
+	}
+}

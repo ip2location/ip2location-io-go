@@ -28,8 +28,8 @@ func TestInvalidKeyWhois(t *testing.T) {
 	}
 }
 
-// TestURLWhois calls LookUp with a bad URL.
-func TestURLWhois(t *testing.T) {
+// TestBadURLWhois calls LookUp with a bad URL.
+func TestBadURLWhois(t *testing.T) {
 	dummy := "DUMMY"
 	config, err := OpenConfiguration(dummy)
 
@@ -48,6 +48,54 @@ func TestURLWhois(t *testing.T) {
 	res, err := whois.LookUp(domain)
 
 	if err == nil {
+		t.Fatalf(`whois.LookUp(domain) = %+v, error`, res)
+	}
+}
+
+// TestNonJSONWhois calls LookUp with non-JSON result URL.
+func TestNonJSONWhois(t *testing.T) {
+	dummy := "DUMMY"
+	config, err := OpenConfiguration(dummy)
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	whois, err := OpenDomainWhois(config)
+	whois.baseUrl = "ip2location.io"
+
+	if err != nil {
+		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
+	}
+
+	domain := "locaproxy.com"
+	res, err := whois.LookUp(domain)
+
+	if err == nil {
+		t.Fatalf(`whois.LookUp(domain) = %+v, error`, res)
+	}
+}
+
+// TestJSONWhois calls LookUp with JSON result URL.
+func TestJSONWhois(t *testing.T) {
+	dummy := "DUMMY"
+	config, err := OpenConfiguration(dummy)
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	whois, err := OpenDomainWhois(config)
+	whois.baseUrl = "ip2location.io/get-ip.json"
+
+	if err != nil {
+		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
+	}
+
+	domain := "locaproxy.com"
+	res, err := whois.LookUp(domain)
+
+	if err != nil {
 		t.Fatalf(`whois.LookUp(domain) = %+v, error`, res)
 	}
 }
@@ -124,6 +172,30 @@ func TestGetDomainName(t *testing.T) {
 	}
 }
 
+// TestGetBadDomainName calls GetDomainName with bad domain
+// to see if it throws error.
+func TestGetBadDomainName(t *testing.T) {
+	config, err := OpenConfiguration("")
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	whois, err := OpenDomainWhois(config)
+
+	if err != nil {
+		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
+	}
+
+	url := "abcde"
+	// expected := "example.com"
+	res, err := whois.GetDomainName(url)
+
+	if err == nil {
+		t.Fatalf(`whois.GetDomainName(url) = %+v, error`, res)
+	}
+}
+
 // TestGetDomainExtension calls GetDomainExtension
 // to see if it returns the correct domain extension.
 func TestGetDomainExtension(t *testing.T) {
@@ -144,6 +216,29 @@ func TestGetDomainExtension(t *testing.T) {
 	res, err := whois.GetDomainExtension(str)
 
 	if err != nil || res != expected {
+		t.Fatalf(`whois.GetDomainExtension(str) = %+v, error`, res)
+	}
+}
+
+// TestGetBadDomainExtension calls GetDomainExtension with bad domain
+// to see if it throws error.
+func TestGetBadDomainExtension(t *testing.T) {
+	config, err := OpenConfiguration("")
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	whois, err := OpenDomainWhois(config)
+
+	if err != nil {
+		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
+	}
+
+	str := "example"
+	res, err := whois.GetDomainExtension(str)
+
+	if err == nil {
 		t.Fatalf(`whois.GetDomainExtension(str) = %+v, error`, res)
 	}
 }
