@@ -124,6 +124,29 @@ func TestGetPunycode(t *testing.T) {
 	}
 }
 
+// TestGetBadPunycode calls GetPunycode with space
+// to see if it throws error.
+func TestGetBadPunycode(t *testing.T) {
+	config, err := OpenConfiguration("")
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	whois, err := OpenDomainWhois(config)
+
+	if err != nil {
+		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
+	}
+
+	domain := "fake this"
+	_, err = whois.GetPunycode(domain)
+
+	if err == nil {
+		t.Fatalf(`whois.GetPunycode(domain) = %+v, error`, domain)
+	}
+}
+
 // TestGetNormalText calls GetNormalText
 // to see if it returns the correct UTF8 domain.
 func TestGetNormalText(t *testing.T) {
@@ -145,6 +168,29 @@ func TestGetNormalText(t *testing.T) {
 
 	if err != nil || res != expected {
 		t.Fatalf(`whois.GetNormalText(domain) = %+v, error`, res)
+	}
+}
+
+// TestGetBadNormalText calls GetNormalText with space
+// to see if it throws error.
+func TestGetBadNormalText(t *testing.T) {
+	config, err := OpenConfiguration("")
+
+	if err != nil {
+		t.Fatalf(`OpenConfiguration(dummy) = %+v, %v, error`, config, err)
+	}
+
+	whois, err := OpenDomainWhois(config)
+
+	if err != nil {
+		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
+	}
+
+	domain := "fake this"
+	_, err = whois.GetNormalText(domain)
+
+	if err == nil {
+		t.Fatalf(`whois.GetNormalText(domain) = %+v, error`, domain)
 	}
 }
 
@@ -187,12 +233,11 @@ func TestGetBadDomainName(t *testing.T) {
 		t.Fatalf(`OpenDomainWhois(config) = %+v, %v, error`, whois, err)
 	}
 
-	url := "abcde"
-	// expected := "example.com"
-	res, err := whois.GetDomainName(url)
+	url := "fake this"
+	_, err = whois.GetDomainName(url)
 
 	if err == nil {
-		t.Fatalf(`whois.GetDomainName(url) = %+v, error`, res)
+		t.Fatalf(`whois.GetDomainName(url) = %+v, error`, url)
 	}
 }
 
