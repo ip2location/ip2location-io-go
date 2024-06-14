@@ -106,6 +106,8 @@ Note: This parameter is only available for Plus and Security plan only.
 
 ## DomainWhois Class
 
+**_Please note that this class is no longer being maintained and has been migrated to a new repository. We recommend that you use the [IP2WHOIS Go SDK](https://github.com/ip2whois/ip2whois-io-go) going forward._**
+
 ```{py:function} OpenDomainWhois(config)
 Initialize the DomainWhois class.
 
