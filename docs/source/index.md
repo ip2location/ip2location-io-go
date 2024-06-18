@@ -6,6 +6,8 @@ This Go package enables user to query for an enriched data set, such as country,
 
 In addition, this package provides WHOIS lookup api that helps users to obtain domain information, WHOIS record, by using a domain name. The WHOIS API returns a comprehensive WHOIS data such as creation date, updated date, expiration date, domain age, the contact information of the registrant, mailing address, phone number, email address, nameservers the domain is using and much more.
 
+Visit www.ip2whois.com for a demo.
+
 
 ## Table of contents
  ```{eval-rst}
