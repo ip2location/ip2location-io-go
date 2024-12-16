@@ -100,6 +100,7 @@ type IPGeolocationResult struct {
 	AdsCategory     string `json:"ads_category"`
 	AdsCategoryName string `json:"ads_category_name"`
 	IsProxy         bool   `json:"is_proxy"`
+	FraudScore      int    `json:"fraud_score"`
 	Proxy           struct {
 		LastSeen           int    `json:"last_seen"`
 		ProxyType          string `json:"proxy_type"`
