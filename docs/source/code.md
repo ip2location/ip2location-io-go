@@ -88,6 +88,7 @@ Note: This parameter is only available for Plus and Security plan only.
 |AdsCategory|string|The domain category code based on IAB Tech Lab Content Taxonomy.|
 |AdsCategoryName|string|The domain category based on IAB Tech Lab Content Taxonomy. These categories are comprised of Tier-1 and Tier-2 (if available) level categories widely used in services like advertising, Internet security and filtering appliances.|
 |IsProxy|boolean|Whether is a proxy or not.|
+|FraudScore|integer|Potential risk score (0 - 99) associated with IP address. A higher IP2Proxy Fraud Score indicates a greater likelihood of fraudulent activity and a lower reputation.|
 |Proxy.LastSeen|integer|Proxy last seen in days.|
 |Proxy.ProxyType|string|Type of proxy.|
 |Proxy.Threat|string|Security threat reported.|

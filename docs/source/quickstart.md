@@ -79,6 +79,7 @@ func main() {
 	fmt.Printf("AdsCategory => %+v\n", res.AdsCategory)
 	fmt.Printf("AdsCategoryName => %+v\n", res.AdsCategoryName)
 	fmt.Printf("IsProxy => %+v\n", res.IsProxy)
+	fmt.Printf("FraudScore => %+v\n", res.FraudScore)
 	
 	fmt.Printf("Continent.Name => %+v\n", res.Continent.Name)
 	fmt.Printf("Continent.Code => %+v\n", res.Continent.Code)
