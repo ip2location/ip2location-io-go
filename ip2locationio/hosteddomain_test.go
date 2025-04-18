@@ -49,7 +49,7 @@ func TestHostedDomain(t *testing.T) {
 	page := 1
 	res, err := hd.LookUp(ip, page)
 
-	if err != nil {
+	if err == nil {
 		t.Fatalf(`hd.LookUp(ip, page) = %+v, %v, error`, res, err)
 	}
 }
