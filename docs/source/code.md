@@ -210,3 +210,30 @@ Get domain extension from a URL or domain.
 :return: Returns the domain extension in text.
 :rtype: string
 ```
+
+## HostedDomain Class
+
+```{py:function} OpenHostedDomain(config)
+Initialize the HostedDomain class.
+
+:param object config: (Required) The IP2Location.io Configuration object returned by Configuration class.
+```
+
+```{py:function} LookUp(ip, page)
+Retrieve hosted domains information for an IP address.
+
+:param string ip: (Required) The IP address (IPv4 or IPv6).
+:param string page: (Required) Page of the result.
+:return: Returns the hosted domains information in JSON. Refer below table for the fields avaliable in the JSON
+:rtype: json
+
+**RETURN FIELDS**
+| Parameter | Type | Description |
+|---|---|---|
+|IP|string|IP address.|
+|TotalDomains|integer|Total number of hosted domains found.|
+|Page|integer|Current lookup page.|
+|PerPage|integer|Number of domains displayed in the page.|
+|TotalPages|integer|Total pages of the hosted domains.|
+|Domains|array|Hosted domains of the lookup IP Address.|
+```

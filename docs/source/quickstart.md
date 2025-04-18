@@ -387,3 +387,49 @@ func main() {
 	fmt.Printf("%+v => %+v\n", testStr, res);
 }
 ```
+
+### Lookup IP Address Hosted Domains Data
+
+You can make a hosted domains data lookup for an IP address as below:
+
+``` go
+package main
+
+import (
+	"github.com/ip2location/ip2location-io-go/ip2locationio"
+	"fmt"
+)
+
+func main() {
+	apikey := "YOUR_API_KEY"
+	
+	config, err := ip2locationio.OpenConfiguration(apikey)
+	
+	if err != nil {
+		fmt.Print(err)
+		return
+	}
+	hd, err := ip2locationio.OpenHostedDomain(config)
+	
+	if err != nil {
+		fmt.Print(err)
+		return
+	}
+	
+	ip := "8.8.8.8"
+	page := 1
+	res, err := hd.LookUp(ip, page)
+	
+	if err != nil {
+		fmt.Print(err)
+		return
+	}
+	
+	fmt.Printf("IP => %+v\n", res.IP)
+	fmt.Printf("TotalDomains => %+v\n", res.TotalDomains)
+	fmt.Printf("Page => %+v\n", res.Page)
+	fmt.Printf("PerPage => %+v\n", res.PerPage)
+	fmt.Printf("TotalPages => %+v\n", res.TotalPages)
+	fmt.Printf("Domains => %+v\n", res.Domains)
+}
+```
