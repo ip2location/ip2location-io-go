@@ -82,6 +82,9 @@ Note: This parameter is only available for Plus and Security plan only.
 |TimeZoneInfo.CurrentTime|string|Current time in ISO 8601 format.|
 |TimeZoneInfo.GmtOffset|integer|GMT offset value in seconds.|
 |TimeZoneInfo.IsDst|boolean|Indicate if the time zone value is in DST.|
+|time_zone_info.Abbreviation|string|The time zone abbreviation of the Olson time zone, for example EST and EEST.|
+|time_zone_info.DstStartDate|string|The date (UTC) of Daylight Saving Time (DST) begins.|
+|time_zone_info.DstEndDate|string|The date (UTC) of Daylight Saving Time (DST) ends.|
 |TimeZoneInfo.Sunrise|string|Time of sunrise. (hh:mm format in local time, i.e, 07:47)|
 |TimeZoneInfo.Sunset|string|Time of sunset. (hh:mm format in local time, i.e 19:50)|
 |Geotargeting.Metro|string|Metro code based on zip/postal code.|

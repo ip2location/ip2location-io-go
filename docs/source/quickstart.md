@@ -117,6 +117,9 @@ func main() {
 	fmt.Printf("TimeZoneInfo.CurrentTime => %+v\n", res.TimeZoneInfo.CurrentTime)
 	fmt.Printf("TimeZoneInfo.GmtOffset => %+v\n", res.TimeZoneInfo.GmtOffset)
 	fmt.Printf("TimeZoneInfo.IsDst => %+v\n", res.TimeZoneInfo.IsDst)
+	fmt.Printf("TimeZoneInfo.Abbreviation => %+v\n", res.TimeZoneInfo.Abbreviation)
+	fmt.Printf("TimeZoneInfo.DstStartDate => %+v\n", res.TimeZoneInfo.DstStartDate)
+	fmt.Printf("TimeZoneInfo.DstEndDate => %+v\n", res.TimeZoneInfo.DstEndDate)
 	fmt.Printf("TimeZoneInfo.Sunrise => %+v\n", res.TimeZoneInfo.Sunrise)
 	fmt.Printf("TimeZoneInfo.Sunset => %+v\n", res.TimeZoneInfo.Sunset)
 	
