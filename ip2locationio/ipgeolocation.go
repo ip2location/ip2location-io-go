@@ -87,12 +87,15 @@ type IPGeolocationResult struct {
 		} `json:"translation"`
 	} `json:"city"`
 	TimeZoneInfo struct {
-		Olson       string `json:"olson"`
-		CurrentTime string `json:"current_time"`
-		GmtOffset   int    `json:"gmt_offset"`
-		IsDst       bool   `json:"is_dst"`
-		Sunrise     string `json:"sunrise"`
-		Sunset      string `json:"sunset"`
+		Olson        string `json:"olson"`
+		CurrentTime  string `json:"current_time"`
+		GmtOffset    int    `json:"gmt_offset"`
+		IsDst        bool   `json:"is_dst"`
+		Abbreviation string `json:"abbreviation"`
+		DstStartDate string `json:"dst_start_date"`
+		DstEndDate   string `json:"dst_end_date"`
+		Sunrise      string `json:"sunrise"`
+		Sunset       string `json:"sunset"`
 	} `json:"time_zone_info"`
 	Geotargeting struct {
 		Metro string `json:"metro"`
