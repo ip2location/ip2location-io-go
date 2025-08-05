@@ -119,6 +119,7 @@ type IPGeolocationResult struct {
 		IsSpammer          bool   `json:"is_spammer"`
 		IsScanner          bool   `json:"is_scanner"`
 		IsBotnet           bool   `json:"is_botnet"`
+		IsBogon            bool   `json:"is_bogon"`
 	} `json:"proxy"`
 }
 
