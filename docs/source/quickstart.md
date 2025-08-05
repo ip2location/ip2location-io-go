@@ -139,6 +139,7 @@ func main() {
 	fmt.Printf("Proxy.IsSpammer => %+v\n", res.Proxy.IsSpammer)
 	fmt.Printf("Proxy.IsScanner => %+v\n", res.Proxy.IsScanner)
 	fmt.Printf("Proxy.IsBotnet => %+v\n", res.Proxy.IsBotnet)
+	fmt.Printf("Proxy.IsBogon => %+v\n", res.Proxy.IsBogon)
 }
 ```
 

@@ -106,6 +106,7 @@ Note: This parameter is only available for Plus and Security plan only.
 |Proxy.IsSpammer|boolean|Email and forum spammers.|
 |Proxy.IsScanner|boolean|Network security scanners.|
 |Proxy.IsBotnet|boolean|Malware infected devices.|
+|Proxy.IsBogon|boolean|Unassigned or illegitimate IP addresses announced via BGP.|
 ```
 
 ## DomainWhois Class
