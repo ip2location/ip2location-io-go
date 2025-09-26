@@ -62,6 +62,13 @@ func main() {
 	fmt.Printf("TimeZone => %+v\n", res.TimeZone)
 	fmt.Printf("Asn => %+v\n", res.Asn)
 	fmt.Printf("AS => %+v\n", res.AS)
+	
+	fmt.Printf("ASInfo.ASNumber => %+v\n", res.ASInfo.ASNumber)
+	fmt.Printf("ASInfo.ASName => %+v\n", res.ASInfo.ASName)
+	fmt.Printf("ASInfo.ASDomain => %+v\n", res.ASInfo.ASDomain)
+	fmt.Printf("ASInfo.ASUsageType => %+v\n", res.ASInfo.ASUsageType)
+	fmt.Printf("ASInfo.ASCidr => %+v\n", res.ASInfo.ASCidr)
+	
 	fmt.Printf("Isp => %+v\n", res.Isp)
 	fmt.Printf("Domain => %+v\n", res.Domain)
 	fmt.Printf("NetSpeed => %+v\n", res.NetSpeed)

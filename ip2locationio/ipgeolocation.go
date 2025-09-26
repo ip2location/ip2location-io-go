@@ -13,30 +13,37 @@ import (
 // The IPGeolocationResult struct stores all of the available
 // geolocation info found in the IP2Location.io API.
 type IPGeolocationResult struct {
-	IP                 string  `json:"ip"`
-	CountryCode        string  `json:"country_code"`
-	CountryName        string  `json:"country_name"`
-	RegionName         string  `json:"region_name"`
-	CityName           string  `json:"city_name"`
-	Latitude           float64 `json:"latitude"`
-	Longitude          float64 `json:"longitude"`
-	ZipCode            string  `json:"zip_code"`
-	TimeZone           string  `json:"time_zone"`
-	Asn                string  `json:"asn"`
-	AS                 string  `json:"as"`
-	Isp                string  `json:"isp"`
-	Domain             string  `json:"domain"`
-	NetSpeed           string  `json:"net_speed"`
-	IddCode            string  `json:"idd_code"`
-	AreaCode           string  `json:"area_code"`
-	WeatherStationCode string  `json:"weather_station_code"`
-	WeatherStationName string  `json:"weather_station_name"`
-	Mcc                string  `json:"mcc"`
-	Mnc                string  `json:"mnc"`
-	MobileBrand        string  `json:"mobile_brand"`
-	Elevation          int     `json:"elevation"`
-	UsageType          string  `json:"usage_type"`
-	AddressType        string  `json:"address_type"`
+	IP          string  `json:"ip"`
+	CountryCode string  `json:"country_code"`
+	CountryName string  `json:"country_name"`
+	RegionName  string  `json:"region_name"`
+	CityName    string  `json:"city_name"`
+	Latitude    float64 `json:"latitude"`
+	Longitude   float64 `json:"longitude"`
+	ZipCode     string  `json:"zip_code"`
+	TimeZone    string  `json:"time_zone"`
+	Asn         string  `json:"asn"`
+	AS          string  `json:"as"`
+	ASInfo      struct {
+		ASNumber    string `json:"as_number"`
+		ASName      string `json:"as_name"`
+		ASDomain    string `json:"as_domain"`
+		ASUsageType string `json:"as_usage_type"`
+		ASCidr      string `json:"as_cidr"`
+	} `json:"as_info"`
+	Isp                string `json:"isp"`
+	Domain             string `json:"domain"`
+	NetSpeed           string `json:"net_speed"`
+	IddCode            string `json:"idd_code"`
+	AreaCode           string `json:"area_code"`
+	WeatherStationCode string `json:"weather_station_code"`
+	WeatherStationName string `json:"weather_station_name"`
+	Mcc                string `json:"mcc"`
+	Mnc                string `json:"mnc"`
+	MobileBrand        string `json:"mobile_brand"`
+	Elevation          int    `json:"elevation"`
+	UsageType          string `json:"usage_type"`
+	AddressType        string `json:"address_type"`
 	Continent          struct {
 		Name        string   `json:"name"`
 		Code        string   `json:"code"`
