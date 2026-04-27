@@ -107,6 +107,7 @@ Note: This parameter is only available for Plus and Security plan only.
 |Proxy.IsPublicProxy|boolean|Public Proxies.|
 |Proxy.IsWebProxy|boolean|Web Proxies.|
 |Proxy.IsWebCrawler|boolean|Search Engine Robots.|
+|Proxy.IsAICrawler|boolean|AI Crawlers.|
 |Proxy.IsResidentialProxy|boolean|Residential proxies.|
 |Proxy.IsSpammer|boolean|Email and forum spammers.|
 |Proxy.IsScanner|boolean|Network security scanners.|

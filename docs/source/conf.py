@@ -6,11 +6,11 @@
 # -- Project information
 
 project = 'IP2Location.io Go SDK'
-copyright = '2025, IP2Location'
+copyright = '2026, IP2Location'
 author = 'IP2Location'
 
-release = '1.5.0'
-version = '1.5.0'
+release = '1.6.0'
+version = '1.6.0'
 
 # -- General configuration
 

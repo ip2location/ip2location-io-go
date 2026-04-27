@@ -122,6 +122,7 @@ type IPGeolocationResult struct {
 		IsPublicProxy      bool   `json:"is_public_proxy"`
 		IsWebProxy         bool   `json:"is_web_proxy"`
 		IsWebCrawler       bool   `json:"is_web_crawler"`
+		IsAICrawler        bool   `json:"is_ai_crawler"`
 		IsResidentialProxy bool   `json:"is_residential_proxy"`
 		IsSpammer          bool   `json:"is_spammer"`
 		IsScanner          bool   `json:"is_scanner"`

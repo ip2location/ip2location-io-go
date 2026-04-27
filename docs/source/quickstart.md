@@ -142,6 +142,7 @@ func main() {
 	fmt.Printf("Proxy.IsPublicProxy => %+v\n", res.Proxy.IsPublicProxy)
 	fmt.Printf("Proxy.IsWebProxy => %+v\n", res.Proxy.IsWebProxy)
 	fmt.Printf("Proxy.IsWebCrawler => %+v\n", res.Proxy.IsWebCrawler)
+	fmt.Printf("Proxy.IsAICrawler => %+v\n", res.Proxy.IsAICrawler)
 	fmt.Printf("Proxy.IsResidentialProxy => %+v\n", res.Proxy.IsResidentialProxy)
 	fmt.Printf("Proxy.IsSpammer => %+v\n", res.Proxy.IsSpammer)
 	fmt.Printf("Proxy.IsScanner => %+v\n", res.Proxy.IsScanner)
