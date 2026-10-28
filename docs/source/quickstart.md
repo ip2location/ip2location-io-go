@@ -62,6 +62,13 @@ func main() {
 	fmt.Printf("TimeZone => %+v\n", res.TimeZone)
 	fmt.Printf("Asn => %+v\n", res.Asn)
 	fmt.Printf("AS => %+v\n", res.AS)
+	
+	fmt.Printf("ASInfo.ASNumber => %+v\n", res.ASInfo.ASNumber)
+	fmt.Printf("ASInfo.ASName => %+v\n", res.ASInfo.ASName)
+	fmt.Printf("ASInfo.ASDomain => %+v\n", res.ASInfo.ASDomain)
+	fmt.Printf("ASInfo.ASUsageType => %+v\n", res.ASInfo.ASUsageType)
+	fmt.Printf("ASInfo.ASCidr => %+v\n", res.ASInfo.ASCidr)
+	
 	fmt.Printf("Isp => %+v\n", res.Isp)
 	fmt.Printf("Domain => %+v\n", res.Domain)
 	fmt.Printf("NetSpeed => %+v\n", res.NetSpeed)
@@ -135,6 +142,7 @@ func main() {
 	fmt.Printf("Proxy.IsPublicProxy => %+v\n", res.Proxy.IsPublicProxy)
 	fmt.Printf("Proxy.IsWebProxy => %+v\n", res.Proxy.IsWebProxy)
 	fmt.Printf("Proxy.IsWebCrawler => %+v\n", res.Proxy.IsWebCrawler)
+	fmt.Printf("Proxy.IsAICrawler => %+v\n", res.Proxy.IsAICrawler)
 	fmt.Printf("Proxy.IsResidentialProxy => %+v\n", res.Proxy.IsResidentialProxy)
 	fmt.Printf("Proxy.IsSpammer => %+v\n", res.Proxy.IsSpammer)
 	fmt.Printf("Proxy.IsScanner => %+v\n", res.Proxy.IsScanner)
